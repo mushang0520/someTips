@@ -1,10 +1,10 @@
 # 列表
 ## 纯CSS实现滚动指示器
-	1.在<body>标签内插入指示器元素：
+  1.在<body>标签内插入指示器元素：
 	```
 	<div class="indicator"></div>
 	```
-	2.粘贴如下所示的CSS代码：
+  2.粘贴如下所示的CSS代码：
 	```
 	body {
 	    position: relative;
