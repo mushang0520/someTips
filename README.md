@@ -1,4 +1,16 @@
 # 列表
+## 固定宽高比例
+  原理：padding的百分比是相对于其包含块的宽度，而不是高度
+  ```
+  ele{
+        display: flex;
+        width: 200px; //宽度随便写，高度会自适应
+  }
+   ele:after {
+    content: '';
+    padding-top: 56%; //16:9
+  }
+  ```
 ## 纯CSS实现滚动指示器
   1.在<body>标签内插入指示器元素：
 ```
