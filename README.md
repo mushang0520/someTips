@@ -1,4 +1,14 @@
 # 列表
+## 正则获取url里的query
+```
+function getQuery(url) {
+        var obj = {};
+        url.replace(/([^?&=]+)=([^&#]+)/g, function (_, k, v) {
+            obj[k] = v
+        })
+        return obj
+    }
+```
 ## 彩色图片转为黑白
 ```
 .gray { 
