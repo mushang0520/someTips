@@ -1,4 +1,8 @@
 # 列表
+## 单侧阴影
+```
+box-shadow: -7px 0 5px -5px #333;
+```
 ## 正则获取url里的query
 ```
 function getQuery(url) {
