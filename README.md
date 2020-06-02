@@ -1,4 +1,19 @@
 # 列表
+## js判断运行环境与关闭当前页面
+```
+var ua = navigator.userAgent;
+  var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+    isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+    isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+    isMobile = isIphone || isAndroid;
+  if(!isMobile) {
+    alert('暂不支持在PC，请在手机打开使用，谢谢支持。')
+    window.opener=null;
+    window.open(' ','_self');
+    window.location.href="about:blank";
+    window.close();
+  }
+```
 ## 单侧阴影
 ```
 box-shadow: -7px 0 5px -5px #333;
