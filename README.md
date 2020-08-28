@@ -1,4 +1,50 @@
 # 列表
+## 文本溢出，hover左右移动
+### 容器定宽，文本不定宽
+```
+<div class="wrap">
+<p title="我的宽度是正常宽度">我的宽度是正常宽度</p>
+<p class="scroll" title="我的宽度是溢出了一小部分">我的宽度是溢出了一小部分</p>
+<p class="scroll" title="我的宽度是溢出了溢出了很大一部分">我的宽度是溢出了溢出了很大一部分</p>
+</div>
+.wrap {
+position: relative;
+width: 150px;
+overflow: hidden;
+}
+
+p {
+display: inline-block;
+white-space: nowrap;
+}
+p:hover {
+animation: move 1.5s infinite alternate linear;
+}
+
+@keyframes move {
+0% {
+transform: translate(0, 0);
+}
+100% {
+transform: translate(calc(-100% + 150px), 0);
+}
+}
+
+```
+### 父容器不定宽度
+```
+@keyframes move {
+0% {
+left: 0;
+transform: translate(0, 0);
+}
+100% {
+left: 100%;
+transform: translate(-100%, 0);
+}
+}
+
+```
 ## js判断运行环境与关闭当前页面
 ```
 var ua = navigator.userAgent;
